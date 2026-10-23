@@ -1,0 +1,14 @@
+__pycache__/
+.venv/
+.env
+*.pem
+*.key
+raw_data/
+private/
+local_evidence/
+*.bag
+*.db3
+*.mcap
+*.elf
+*.hex
+*.bin
