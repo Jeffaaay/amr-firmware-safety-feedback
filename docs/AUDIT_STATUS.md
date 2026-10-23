@@ -1,3 +1,3 @@
 # M0 audit status
 
-Read-only local source audit in progress. Detailed proprietary evidence stays in the local audit deliverable; no production source is copied into this repository. Deployment provenance and hardware approval are unverified.
+Available local static inspection delivered. M0 remains open for deployed-baseline/provenance reconciliation. The detailed audit and per-file evidence remain in the local outputs directory and are not uploaded. See [research execution report](RESEARCH_REPORT.md).

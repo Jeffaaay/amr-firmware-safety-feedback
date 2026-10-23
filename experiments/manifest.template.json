@@ -1,0 +1,27 @@
+{
+  "manifest_version": 1,
+  "status": "NOT_EXECUTABLE_TEMPLATE",
+  "scheduled_window": "2026-10-26/2026-11-01",
+  "experiment": "feedback_comparison",
+  "harness": {
+    "repository": "https://github.com/Jeffaaay/amr-faultbench.git",
+    "commit": "a21dd7c26fc8fdcaff21e46182751ad790fd3877"
+  },
+  "repository_commit_at_run": null,
+  "source_versions": {
+    "deployed_firmware_commit": null,
+    "deployed_software_commit": null,
+    "firmware_source_digest": null,
+    "firmware_artifact_digest": null,
+    "safety_config_digest": null
+  },
+  "hardware_authorization": null,
+  "seed": null,
+  "data_references": [],
+  "preconditions": [
+    "October 25 schema freeze",
+    "resolve exact source and experiment commits",
+    "independent evaluator and fixed safety configuration",
+    "hardware access only under separately approved procedure"
+  ]
+}
