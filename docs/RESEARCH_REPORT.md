@@ -15,3 +15,5 @@ Next task: reconcile an existing approved deployed build/commit/config manifest 
 See [decisions](DECISIONS.md), [milestones](MILESTONES.md), [prioritized issues](ISSUES.md), and [experiment log](EXPERIMENT_LOG.md).
 
 2026-10-23 addendum: the local source-backed AMR PCB functional map and interface baseline are complete. Generic Chinese roadmap, F01/recovery/metrics readiness documents, payload templates and feedback-comparison protocol are now available in their owning repositories. See README links. These are preparation artifacts; M0 deployment reconciliation, October 25 freeze and later experiment gates remain open.
+
+2026-10-23 trace addendum: draft.2 and the offline review tool now distinguish declared evidence levels, stopping scope, CAN bytes, source clocks and missing capture data. Forty synthetic/adversarial contract tests pass. This supersedes the earlier 14-test snapshot for current draft validation, but does not close M0, freeze the schema, establish stopping performance or execute F01.

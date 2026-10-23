@@ -5,7 +5,7 @@
   "experiment": "feedback_comparison",
   "harness": {
     "repository": "https://github.com/Jeffaaay/amr-faultbench.git",
-    "commit": "b29f9ea94a726dc6400564ad882e66fc864d9a32"
+    "commit": "d53f635fef1c5c6f021a041062089e1bcd5df7b9"
   },
   "repository_commit_at_run": null,
   "source_versions": {

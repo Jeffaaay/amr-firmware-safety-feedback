@@ -3,7 +3,7 @@
   "dependencies": {
     "amr-faultbench": {
       "repository": "https://github.com/Jeffaaay/amr-faultbench.git",
-      "commit": "b29f9ea94a726dc6400564ad882e66fc864d9a32",
+      "commit": "d53f635fef1c5c6f021a041062089e1bcd5df7b9",
       "status": "planning_and_trace_proposal_only_not_a_functional_harness"
     }
   }

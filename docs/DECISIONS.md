@@ -15,3 +15,5 @@
 2026-10-23 — Available source versions differ. Preserve separate provenance and resolve deployed baseline before binding experiments. Fourteen synthetic trace-contract tests passed; freeze and hardware acceptance remain open.
 
 2026-10-23 — Added the owner-supplied execution sequence, a local source-backed PCB baseline diagram, and paper-specific readiness contracts. Proprietary source-derived details stay local. No change to the October 23–November 1 gates, no added paper, no hardware action, no experimental result.
+
+2026-10-23 — Trace proposal revised to draft.2 after read-only stop/recovery inspection. Explicit stopping-observation scope, CAN metadata and native-counter normalization prevent false evidence equivalence. Offline contract review is available; October 25 freeze, real integration and all hardware approvals remain open.
