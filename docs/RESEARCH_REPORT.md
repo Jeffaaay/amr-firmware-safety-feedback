@@ -13,3 +13,5 @@ Outstanding: deployed source/build/config provenance; verified physical specific
 Next task: reconcile an existing approved deployed build/commit/config manifest as M0 closure. Next dated milestone: October 25 trace-schema freeze. October 26–November 1 implementation has not started. No experiments, paper submissions, public posts or future automatic runs are claimed.
 
 See [decisions](DECISIONS.md), [milestones](MILESTONES.md), [prioritized issues](ISSUES.md), and [experiment log](EXPERIMENT_LOG.md).
+
+2026-10-23 addendum: the local source-backed AMR PCB functional map and interface baseline are complete. Generic Chinese roadmap, F01/recovery/metrics readiness documents, payload templates and feedback-comparison protocol are now available in their owning repositories. See README links. These are preparation artifacts; M0 deployment reconciliation, October 25 freeze and later experiment gates remain open.

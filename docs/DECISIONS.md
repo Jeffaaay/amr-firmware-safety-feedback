@@ -13,3 +13,5 @@
 2026-10-23 — Braking values remain unknown until authorized measured evidence exists. 600 kg and 1000 kg are planned payload ratings, not curb masses or validated vehicles.
 
 2026-10-23 — Available source versions differ. Preserve separate provenance and resolve deployed baseline before binding experiments. Fourteen synthetic trace-contract tests passed; freeze and hardware acceptance remain open.
+
+2026-10-23 — Added the owner-supplied execution sequence, a local source-backed PCB baseline diagram, and paper-specific readiness contracts. Proprietary source-derived details stay local. No change to the October 23–November 1 gates, no added paper, no hardware action, no experimental result.
