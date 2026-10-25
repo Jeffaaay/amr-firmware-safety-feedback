@@ -1,0 +1,217 @@
+PASS: PD15 production-C boot/polarity, debounce/bounce, coalescing, queue retry, periodic fallback, tick wrap, stall, 105-byte limit
+PASS: no 0x1018 accesses or identity data in startup/recovery; bilateral config and preserved type 254
+PASS: every SDO abort/readback failure retains phase/node/object/expected/actual/abort; NMT/offline/restart/stale block ENABLE
+PASS: actual automatic Drive startup completes without identity; config cause propagates; missing TPDO blocks arming
+PASS: signed/zero encoding and wheel assignment; FIFO BUSY; bilateral completion; partial queue failure; TX timeout; bus-off
+PASS: cancellation race and hardware barrier; no zero before quiescence; no replay after recovery; cancellation timeout
+PASS: 10/40 Hz equal real-time acceleration; first execution; rollover; delayed dt cap; BUSY retry does not commit; original signs/units
+PASS: real Drive loop queues without commit; bilateral TX commits once; PI snapshot and newer feedback preserved; no normal background SDO
+PASS: pending STOP/watchdog/Lift/boot-up/EMCY/bus-off preemption; no stale replay; ACK alone not stopped; fresh TPDO measured stop
+PASS: actual TPDO pairing requires both nodes; skew rejection; stale fail-closed/no SDO fallback; real ODOM integration
+PASS: cooperative production control executes 40 ticks/second; dedup reduces frames independently; first departure excludes idle time
+PASS: READY PI integral commits once after TX, BUSY does not integrate, retarget reset survives; persistent CAN fault never confirms parking
+RETARGET 80->200: expected=105 actual=105.000 last_commit_age=325 proposal_dt=25 state=RUNNING
+RETARGET 80->0: expected=55 actual=55.000 last_commit_age=325 proposal_dt=25 state=RUNNING
+PASS: repeated held commands spend shaping time only; TX timestamp/count/PI unchanged; positive and negative reversals slew through zero
+PASS: BUSY/pending do not advance unsent execution or shaping state; retry uses latest target and real dt; each bilateral completion commits once
+PASS: retarget across tick wrap; idle departure preserves TX record; delayed scheduling uses 70 ms; explicit STOP preempts ordinary deceleration immediately
+PASS: production 10/40 Hz equal elapsed-time trajectory with acceleration, constant holds, reversal and ordinary zero deceleration
+PASS: real Lift reset + 50 ms + HOME; continuous/gapped Drive service and tick wrap
+PASS: invalidated zero evidence requires >=3 fresh bilateral pairs AND >=100 ms; cached pair cannot count
+PASS: Lift rejects stale/one-sided/nonzero feedback, STOP generation change and either statusword SDO abort
+PASS: expired statusword blocks homing; fresh bilateral readback renews disabled evidence
+RECOVERY startup=3 drive=DISABLED hd=1 tracking=1 inhibit=1 configured=1/1 transport=4
+PASS: both startup gates reject current fault/unsafe hardware/transactions/STOP/Lift/E-stop/CAN; TPDO freshness/skew and persistent reset failure preserved
+PASS: main loop fault -> communication recovery -> reset -> DISABLE -> PDO/fresh TPDO, stays DISABLED with history intact
+PASS: host production-C wheel RPDO tests (hardware NOT RUN)
+PASS BOOT 01: immediately ready completes first attempt without 5-second delay
+PASS BOOT 02: offline mask=2 ready at 3 seconds, one full bilateral retry succeeds
+PASS BOOT 03: offline mask=4 ready at 3 seconds, one full bilateral retry succeeds
+PASS BOOT 04: both drives first respond at second-attempt boundary; exact 5000 ms wait
+PASS BOOT 05: permanently offline latches second failure; no third retry for 60 seconds
+PASS BOOT 06: either-node SDO Abort remains a hard fault without retry
+PASS BOOT 07: DS402 Fault and EMCY before initialization or during retry wait cannot recover
+PASS BOOT 08: BUS_OFF before startup and during wait is never an ordinary timeout
+PASS BOOT late hard evidence: retired-transaction Abort/6041 Fault on either node fails during WAIT and at 5000 ms without second attempt
+PASS BOOT FIFO: buffered stale frames rejected and Lift SDO preserved during wheel-only fence
+PASS BOOT 11: repeated ENABLE/CMD_VEL cannot move or replay after recovered TPDO startup
+PASS BOOT 12: repeated STOP/DISABLE neither restart initialization nor postpone retry
+PASS BOOT 15: unavailable feedback never grants Lift zero proof; fresh TPDO authority still required
+PASS BOOT 13: retry timer remains exact across HAL_GetTick wraparound
+PASS BOOT 14: established runtime feedback loss retains original latched-fault behavior
+PASS BOOT extra: responsive enabled state and malformed status response never qualify for retry
+PASS BOOT 09: write ACK alone never confirms disabled; unavailable status retries once then latches on second failure
+PASS BOOT latency: 10/15 ms actual response delay with 10 ms loop; either-node initial write or status-read timeout recovers once
+PASS BOOT DS402: either node 0040/0060 switch-on-disabled, 0021 ready and 0023 switched-on qualify in both attempts; 0068 fault and 0064 invalid never qualify
+KNOWN LIMITATION replay node=1 old_extra=1 state=3 retries=1 injections=1 hw_disabled=1 enabled=0
+KNOWN LIMITATION replay node=1 old_extra=4 state=3 retries=1 injections=1 hw_disabled=1 enabled=0
+KNOWN LIMITATION replay node=2 old_extra=1 state=3 retries=1 injections=1 hw_disabled=1 enabled=0
+KNOWN LIMITATION replay node=2 old_extra=4 state=3 retries=1 injections=1 hw_disabled=1 enabled=0
+KNOWN LIMITATION: standard SDO same-node/object replay during an active retry read can produce READY and hardware-disabled confirmation; no automatic enable or motion occurred. Software tests do not resolve or prove safety against this replay risk.
+REVIEW EMCY node=1 prefix=0 deadline=0 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=1 prefix=0 deadline=1 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=1 prefix=7 deadline=0 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=1 prefix=7 deadline=1 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=1 prefix=8 deadline=0 state=1 retries=0 second_writes=0/0
+REVIEW EMCY node=1 prefix=8 deadline=1 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=0 deadline=0 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=0 deadline=1 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=7 deadline=0 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=7 deadline=1 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=8 deadline=0 state=1 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=8 deadline=1 state=4 retries=0 second_writes=0/0
+PASS REVIEW software-queue model (128 slots): EMCY/Clear survives same-batch and RX-budget split; this does not model hardware FIFO overflow
+REVIEW boot ACK node=1 kind=1 state=4 retries=0
+REVIEW runtime ACK node=1 kind=1 async=5
+REVIEW blocking ACK node=1 kind=1 success=0
+REVIEW boot ACK node=1 kind=2 state=4 retries=0
+REVIEW runtime ACK node=1 kind=2 async=5
+REVIEW blocking ACK node=1 kind=2 success=0
+REVIEW boot ACK node=1 kind=3 state=4 retries=0
+REVIEW runtime ACK node=1 kind=3 async=5
+REVIEW blocking ACK node=1 kind=3 success=0
+REVIEW boot ACK node=1 kind=4 state=4 retries=0
+REVIEW runtime ACK node=1 kind=4 async=5
+REVIEW blocking ACK node=1 kind=4 success=0
+REVIEW boot ACK node=1 kind=5 state=4 retries=1
+REVIEW runtime ACK node=1 kind=5 async=3
+REVIEW blocking ACK node=1 kind=5 success=0
+REVIEW boot ACK node=1 kind=6 state=4 retries=1
+REVIEW runtime ACK node=1 kind=6 async=3
+REVIEW blocking ACK node=1 kind=6 success=0
+REVIEW boot ACK node=2 kind=1 state=4 retries=0
+REVIEW runtime ACK node=2 kind=1 async=5
+REVIEW blocking ACK node=2 kind=1 success=0
+REVIEW boot ACK node=2 kind=2 state=4 retries=0
+REVIEW runtime ACK node=2 kind=2 async=5
+REVIEW blocking ACK node=2 kind=2 success=0
+REVIEW boot ACK node=2 kind=3 state=4 retries=0
+REVIEW runtime ACK node=2 kind=3 async=5
+REVIEW blocking ACK node=2 kind=3 success=0
+REVIEW boot ACK node=2 kind=4 state=4 retries=0
+REVIEW runtime ACK node=2 kind=4 async=5
+REVIEW blocking ACK node=2 kind=4 success=0
+REVIEW boot ACK node=2 kind=5 state=4 retries=1
+REVIEW runtime ACK node=2 kind=5 async=3
+REVIEW blocking ACK node=2 kind=5 success=0
+REVIEW boot ACK node=2 kind=6 state=4 retries=1
+REVIEW runtime ACK node=2 kind=6 async=3
+REVIEW blocking ACK node=2 kind=6 success=0
+PASS REVIEW: 6040 ACK lengths 4/5/7 and wrong CS/index/sub cannot succeed in boot, async or blocking runtime
+PASS V1 compatibility: prior diagnostic 6041 does not disable the single retry; valid non-disabled status polls until the existing deadline in either attempt
+PASS generic SDO DLC8: 72 async/blocking read/write cases across Nodes 1/2/3; short 8-bit/16-bit uploads and non-6040 ACKs rejected, valid DLC8 accepted
+SDO oversized DLC node=1 read=0 async=3
+SDO oversized DLC node=1 read=1 async=3
+SDO oversized DLC node=2 read=0 async=3
+SDO oversized DLC node=2 read=1 async=3
+SDO oversized DLC node=3 read=0 async=3
+SDO oversized DLC node=3 read=1 async=3
+SDO oversized DLC boot node=1 state=4
+SDO oversized DLC boot node=2 state=4
+PASS SDO oversized DLC: raw DLC=9 with 12-byte HAL copy cannot complete async/blocking SDO or confirm boot READY
+PASS RX age: 32 node/attempt/wrap cases; actual RX age 149/150 allowed, 151/200 requires fresh read before READY
+PASS RX age with real LIFT_RAW_STATUS: offline Node 3 dispatches then delays wheel completion; either node/attempt must refresh before READY
+PASS typed SDO widths: 108 DLC8 cases, U8/U16/U32 versus 4F/4B/43, async/blocking, Nodes 1/2/3, observer on/ended; mismatches are protocol errors and invalid mailboxes
+PASS 8-slot RX model: Fault/Clear arrive as slots are consumed, cross the 8-frame budget and forbid retry; physical overflow/loss remains untested
+PASS Resume arrivals: 8 cases, direct BootService and full control loop; either-node Fault/Clear stays fenced with retries=0/no START/no SDO, benign traffic resumes once without resetting 5s, continuous traffic returns after bounded RX passes
+PASS: V1 software regressions; same-object SDO replay remains a KNOWN LIMITATION (hardware NOT RUN)
+PASS BOOT 01: immediately ready completes first attempt without 5-second delay
+PASS BOOT 02: offline mask=2 ready at 3 seconds, one full bilateral retry succeeds
+PASS BOOT 03: offline mask=4 ready at 3 seconds, one full bilateral retry succeeds
+PASS BOOT 04: both drives first respond at second-attempt boundary; exact 5000 ms wait
+PASS BOOT 05: permanently offline latches second failure; no third retry for 60 seconds
+PASS BOOT 06: either-node SDO Abort remains a hard fault without retry
+PASS BOOT 07: DS402 Fault and EMCY before initialization or during retry wait cannot recover
+PASS BOOT 08: BUS_OFF before startup and during wait is never an ordinary timeout
+PASS BOOT late hard evidence: retired-transaction Abort/6041 Fault on either node fails during WAIT and at 5000 ms without second attempt
+PASS BOOT FIFO: buffered stale frames rejected and Lift SDO preserved during wheel-only fence
+PASS BOOT 11: repeated ENABLE/CMD_VEL cannot move or replay after recovered TPDO startup
+PASS BOOT 12: repeated STOP/DISABLE neither restart initialization nor postpone retry
+PASS BOOT 15: unavailable feedback never grants Lift zero proof; fresh TPDO authority still required
+PASS BOOT 13: retry timer remains exact across HAL_GetTick wraparound
+PASS BOOT 14: established runtime feedback loss retains original latched-fault behavior
+PASS BOOT extra: responsive enabled state and malformed status response never qualify for retry
+PASS BOOT 09: write ACK alone never confirms disabled; unavailable status retries once then latches on second failure
+PASS BOOT latency: 10/15 ms actual response delay with 10 ms loop; either-node initial write or status-read timeout recovers once
+PASS BOOT DS402: either node 0040/0060 switch-on-disabled, 0021 ready and 0023 switched-on qualify in both attempts; 0068 fault and 0064 invalid never qualify
+KNOWN LIMITATION replay node=1 old_extra=1 state=3 retries=1 injections=1 hw_disabled=1 enabled=0
+KNOWN LIMITATION replay node=1 old_extra=4 state=3 retries=1 injections=1 hw_disabled=1 enabled=0
+KNOWN LIMITATION replay node=2 old_extra=1 state=3 retries=1 injections=1 hw_disabled=1 enabled=0
+KNOWN LIMITATION replay node=2 old_extra=4 state=3 retries=1 injections=1 hw_disabled=1 enabled=0
+KNOWN LIMITATION: standard SDO same-node/object replay during an active retry read can produce READY and hardware-disabled confirmation; no automatic enable or motion occurred. Software tests do not resolve or prove safety against this replay risk.
+REVIEW EMCY node=1 prefix=0 deadline=0 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=1 prefix=0 deadline=1 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=1 prefix=7 deadline=0 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=1 prefix=7 deadline=1 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=1 prefix=8 deadline=0 state=1 retries=0 second_writes=0/0
+REVIEW EMCY node=1 prefix=8 deadline=1 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=0 deadline=0 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=0 deadline=1 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=7 deadline=0 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=7 deadline=1 state=4 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=8 deadline=0 state=1 retries=0 second_writes=0/0
+REVIEW EMCY node=2 prefix=8 deadline=1 state=4 retries=0 second_writes=0/0
+PASS REVIEW software-queue model (128 slots): EMCY/Clear survives same-batch and RX-budget split; this does not model hardware FIFO overflow
+REVIEW boot ACK node=1 kind=1 state=4 retries=0
+REVIEW runtime ACK node=1 kind=1 async=5
+REVIEW blocking ACK node=1 kind=1 success=0
+REVIEW boot ACK node=1 kind=2 state=4 retries=0
+REVIEW runtime ACK node=1 kind=2 async=5
+REVIEW blocking ACK node=1 kind=2 success=0
+REVIEW boot ACK node=1 kind=3 state=4 retries=0
+REVIEW runtime ACK node=1 kind=3 async=5
+REVIEW blocking ACK node=1 kind=3 success=0
+REVIEW boot ACK node=1 kind=4 state=4 retries=0
+REVIEW runtime ACK node=1 kind=4 async=5
+REVIEW blocking ACK node=1 kind=4 success=0
+REVIEW boot ACK node=1 kind=5 state=4 retries=1
+REVIEW runtime ACK node=1 kind=5 async=3
+REVIEW blocking ACK node=1 kind=5 success=0
+REVIEW boot ACK node=1 kind=6 state=4 retries=1
+REVIEW runtime ACK node=1 kind=6 async=3
+REVIEW blocking ACK node=1 kind=6 success=0
+REVIEW boot ACK node=2 kind=1 state=4 retries=0
+REVIEW runtime ACK node=2 kind=1 async=5
+REVIEW blocking ACK node=2 kind=1 success=0
+REVIEW boot ACK node=2 kind=2 state=4 retries=0
+REVIEW runtime ACK node=2 kind=2 async=5
+REVIEW blocking ACK node=2 kind=2 success=0
+REVIEW boot ACK node=2 kind=3 state=4 retries=0
+REVIEW runtime ACK node=2 kind=3 async=5
+REVIEW blocking ACK node=2 kind=3 success=0
+REVIEW boot ACK node=2 kind=4 state=4 retries=0
+REVIEW runtime ACK node=2 kind=4 async=5
+REVIEW blocking ACK node=2 kind=4 success=0
+REVIEW boot ACK node=2 kind=5 state=4 retries=1
+REVIEW runtime ACK node=2 kind=5 async=3
+REVIEW blocking ACK node=2 kind=5 success=0
+REVIEW boot ACK node=2 kind=6 state=4 retries=1
+REVIEW runtime ACK node=2 kind=6 async=3
+REVIEW blocking ACK node=2 kind=6 success=0
+PASS REVIEW: 6040 ACK lengths 4/5/7 and wrong CS/index/sub cannot succeed in boot, async or blocking runtime
+PASS V1 compatibility: prior diagnostic 6041 does not disable the single retry; valid non-disabled status polls until the existing deadline in either attempt
+PASS generic SDO DLC8: 72 async/blocking read/write cases across Nodes 1/2/3; short 8-bit/16-bit uploads and non-6040 ACKs rejected, valid DLC8 accepted
+SDO oversized DLC node=1 read=0 async=3
+SDO oversized DLC node=1 read=1 async=3
+SDO oversized DLC node=2 read=0 async=3
+SDO oversized DLC node=2 read=1 async=3
+SDO oversized DLC node=3 read=0 async=3
+SDO oversized DLC node=3 read=1 async=3
+SDO oversized DLC boot node=1 state=4
+SDO oversized DLC boot node=2 state=4
+PASS SDO oversized DLC: raw DLC=9 with 12-byte HAL copy cannot complete async/blocking SDO or confirm boot READY
+PASS RX age: 32 node/attempt/wrap cases; actual RX age 149/150 allowed, 151/200 requires fresh read before READY
+PASS RX age with real LIFT_RAW_STATUS: offline Node 3 dispatches then delays wheel completion; either node/attempt must refresh before READY
+PASS typed SDO widths: 108 DLC8 cases, U8/U16/U32 versus 4F/4B/43, async/blocking, Nodes 1/2/3, observer on/ended; mismatches are protocol errors and invalid mailboxes
+PASS 8-slot RX model: Fault/Clear arrive as slots are consumed, cross the 8-frame budget and forbid retry; physical overflow/loss remains untested
+PASS Resume arrivals: 8 cases, direct BootService and full control loop; either-node Fault/Clear stays fenced with retries=0/no START/no SDO, benign traffic resumes once without resetting 5s, continuous traffic returns after bounded RX passes
+PASS: V1 software regressions; same-object SDO replay remains a KNOWN LIMITATION (hardware NOT RUN)
+PASS: non-BASIC profile retains both strict tracking/inhibit gates
+PASS: boot GREEN; all 8 colors; Drive/Lift/both force solid RED; restore latest request including OFF; active-low pins and off-before-on ordering
+PASS: malformed channels, missing/extra tokens, nonce errors leave every saved color intact; normal CMD_ACK sequence/reasons/nonce; valid command after errors
+PASS: fragmented CRLF/LF UART framing, invalid-then-valid recovery, DMA drain, FW_VERSION/ENABLE/CMD_VEL/STOP dispatch
+PASS: production-C status light tests (hardware NOT RUN)
+PASS: production-C diagnostics -> Jetson parser/gate, unknown identity and full failure context
+PASS: 82 source files; snapshot 86730900948957981855cc4322dd83bced1ef30598ecd2b05c97115b8b26169a
+PASS: 82 source files; snapshot 86730900948957981855cc4322dd83bced1ef30598ecd2b05c97115b8b26169a
+PASS: offline baseline regressions. No hardware acceptance or research result is implied.

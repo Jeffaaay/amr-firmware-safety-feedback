@@ -1,12 +1,16 @@
 # amr-firmware-safety-feedback
 
-Paper 3: Firmware Safety Feedback. Private research workspace initialized 2026-10-23. No experiment or hardware validation is claimed.
+Paper 3: Firmware Safety Feedback. Public research workspace; initialized 2026-10-23, baseline published 2026-10-24. No experiment or hardware validation is claimed.
 
 - [Frozen research plan](docs/RESEARCH_PLAN.md)
 - [Implementation milestones](docs/MILESTONES.md)
 - [Decisions and IP boundaries](docs/DECISIONS.md)
 - [Audit status](docs/AUDIT_STATUS.md)
 - [Experiment log](docs/EXPERIMENT_LOG.md)
+
+## Baseline source code
+
+Start with [code/](code/README.md): current AMR PCB application source, offline C regressions, source hashes and update instructions. Includes the PD15 telemetry implementation. This is a source/test baseline; paper experiments and hardware acceptance remain pending.
 
 ## Structure
 

@@ -1,0 +1,3 @@
+# Keep tooling portable and preserve byte-exact imported source.
+code/** text eol=lf
+code/baseline/** -text

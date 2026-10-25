@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "source_label": "AMR_PCB _RGB",
+  "source_revision_kind": "local-directory-content-digest",
+  "source_git_commit": null,
+  "captured_at_utc": "2026-10-25T06:39:11.795053+00:00",
+  "snapshot_sha256": "86730900948957981855cc4322dd83bced1ef30598ecd2b05c97115b8b26169a",
+  "files": [
+    {
+      "path": "Core/Inc/app_config.h",
+      "bytes": 17869,
+      "sha256": "09b88813aa19a108566181f8d04561fe4ee3eca48f1fe570bfe61f14c6b90de8"
+    },
+    {
+      "path": "Core/Inc/battery.h",
+      "bytes": 5337,
+      "sha256": "d90292cb03f311a4c88aa960259c0210af64a66df44a0378825dec34c0ba1c27"
+    },
+    {
+      "path": "Core/Inc/can_trace.h",
+      "bytes": 7115,
+      "sha256": "c61f6f3dac1fd72a8cf9bc0f14469774e0be00747cdec39607880f0b3abbd34c"
+    },
+    {
+      "path": "Core/Inc/canopen.h",
+      "bytes": 21598,
+      "sha256": "f73e405c7166a33883352ba89fbe4e8d0b2d59b3b506310efd8a5f949c98fe6a"
+    },
+    {
+      "path": "Core/Inc/command_result.h",
+      "bytes": 1306,
+      "sha256": "14274c64c16a9d9191f8c408c135fe7f6ae95510a38be5d47996b8e8b1d26b45"
+    },
+    {
+      "path": "Core/Inc/diagnostics.h",
+      "bytes": 1281,
+      "sha256": "7ea99c34da97431325770f4489066cb4f7e532656f744d709cfe4c9bf1708d82"
+    },
+    {
+      "path": "Core/Inc/drive.h",
+      "bytes": 9575,
+      "sha256": "55b05771ef5cb11c293576feeffd72ece116acc1cfb2d14c63dc5f11c007f525"
+    },
+    {
+      "path": "Core/Inc/estop_status.h",
+      "bytes": 363,
+      "sha256": "1b68666728fb88a98dc63ceb13c700e03d199251beb6b613cf4d79ee88ecf5aa"
+    },
+    {
+      "path": "Core/Inc/firmware_identity.h",
+      "bytes": 2465,
+      "sha256": "9c816437074c69f0d30ca6c90261f70ae9a667208afe3b102a5a8e8ecaa0dc20"
+    },
+    {
+      "path": "Core/Inc/imu.h",
+      "bytes": 2518,
+      "sha256": "b37972ccf98496e337f4e22ad53900153289ac8954c77e6c4a1d5aa7ca5bbcf1"
+    },
+    {
+      "path": "Core/Inc/imu_ism330dhcx.h",
+      "bytes": 2522,
+      "sha256": "4dd1ab85295964f0f918c6cc68a082c12ea48ced3814d437c4be855f0e89db9f"
+    },
+    {
+      "path": "Core/Inc/jetson_protocol.h",
+      "bytes": 4901,
+      "sha256": "f74544248359b18a8778c2a2d61708c6b374a6e5948371ebd1312da7ca51c297"
+    },
+    {
+      "path": "Core/Inc/jetson_tx.h",
+      "bytes": 3078,
+      "sha256": "911663cfff23fb26139186e7145ea69af004fa77c03f6ad468d84b8b698814a2"
+    },
+    {
+      "path": "Core/Inc/lift.h",
+      "bytes": 1688,
+      "sha256": "cf25d7f18389c662245e5a18a780d904559a4ba83c6da521fb4defe5f7dcf8ea"
+    },
+    {
+      "path": "Core/Inc/main.h",
+      "bytes": 4000,
+      "sha256": "a089c4f108a77a8898fff073c3102595bb73a76500f220d6be1717bcf4cbb3aa"
+    },
+    {
+      "path": "Core/Inc/modbus_rtu.h",
+      "bytes": 3840,
+      "sha256": "7bc999f1be6f8a80380d2a9a3d4a6ecfed3eb86de5642c352108868b3e26ccd7"
+    },
+    {
+      "path": "Core/Inc/motion_control.h",
+      "bytes": 13577,
+      "sha256": "70e59269b23c51a54b258afebb1e2157405d2a200a13a7bb13d036345d863063"
+    },
+    {
+      "path": "Core/Inc/odom.h",
+      "bytes": 1187,
+      "sha256": "2a598767c8a8855282c512be976717e52003103cc8f68af43e30bad8a8b595a3"
+    },
+    {
+      "path": "Core/Inc/safety_io.h",
+      "bytes": 456,
+      "sha256": "da764c02f38e3c2c007f33bad50a871208c7730148b56a7c99201f2db6f1bd60"
+    },
+    {
+      "path": "Core/Inc/status_light.h",
+      "bytes": 680,
+      "sha256": "ed641e00a30bc02ec691d201955b7dae55b1f6c1546ed8cf89bb07a406f42528"
+    },
+    {
+      "path": "Core/Inc/stm32h7xx_hal_conf.h",
+      "bytes": 19596,
+      "sha256": "c2743106c6933d6f11958aa7e91efc436a01424a0f57e50a7a7bd060b48d27e9"
+    },
+    {
+      "path": "Core/Inc/stm32h7xx_it.h",
+      "bytes": 1990,
+      "sha256": "fd7985e7299422e209664884d5d73cd27fe4ceb1d98d07fe4c297fa7c92cf018"
+    },
+    {
+      "path": "Core/Inc/wheel_pdo_config.h",
+      "bytes": 793,
+      "sha256": "eac62067b9143fe6d46bee1cdcb19a73a2ff8b9489bfd40f39a384921ff17a64"
+    },
+    {
+      "path": "Core/Inc/wheel_pdo_profile.h",
+      "bytes": 509,
+      "sha256": "1b3a622d780022464af7d4525c1e5517a25017585c765ea0681f6423c8131ac7"
+    },
+    {
+      "path": "Core/Inc/wheel_rpdo_tx.h",
+      "bytes": 1356,
+      "sha256": "022d588042a0d780da7adb5bcf021d978024a4cded76955573d0aee8a3667994"
+    },
+    {
+      "path": "Core/Src/battery.c",
+      "bytes": 32343,
+      "sha256": "841942e67d2e7963cdc8e482a0289d90bc10ec1f011e3900624eba5a012aa709"
+    },
+    {
+      "path": "Core/Src/can_trace.c",
+      "bytes": 35370,
+      "sha256": "e21e6e2a0db80e1d48d7e25d3a040c1c0f70483f959af64bcc3ee24d050f31e5"
+    },
+    {
+      "path": "Core/Src/canopen.c",
+      "bytes": 127293,
+      "sha256": "37cf08b27200366c014cb088ae21f6fea138b8fe8f4b14e7182e4b070e02892f"
+    },
+    {
+      "path": "Core/Src/diagnostics.c",
+      "bytes": 4953,
+      "sha256": "70c4c3e3462c77568a3fc852697c2aad30f28b252ab728d0a24214394af0cebb"
+    },
+    {
+      "path": "Core/Src/drive.c",
+      "bytes": 7314,
+      "sha256": "9a9b5d67d547459760e498d16b5c20b30cd7db3edcc29f35bd5994d566db3a9d"
+    },
+    {
+      "path": "Core/Src/drive_control.c",
+      "bytes": 89452,
+      "sha256": "fff0f47c4028e33f9839711c55585b7b08e7033a66b1dc5700d46317825b1e99"
+    },
+    {
+      "path": "Core/Src/drive_core.c",
+      "bytes": 8705,
+      "sha256": "abdd198cdc914a78f6a4608780f55bc7bf9b38b3c855d8e50ed9dd788e693a70"
+    },
+    {
+      "path": "Core/Src/drive_diag.c",
+      "bytes": 90032,
+      "sha256": "8d2704aa60980b6c87683c9491d7741ae7cfdb1e2184771beb4eb5b142890e4e"
+    },
+    {
+      "path": "Core/Src/drive_fault_reset.c",
+      "bytes": 36230,
+      "sha256": "27af993932289e7d9a1a0c7dd7ef2bcacf14bbd32f2f018db496b79a5f16c8ce"
+    },
+    {
+      "path": "Core/Src/drive_internal.h",
+      "bytes": 24519,
+      "sha256": "f54628da0168f61125dd65aa1dcd26350fb3f25505cb3aef5688cf88b9fe92e8"
+    },
+    {
+      "path": "Core/Src/drive_lift_stop_diag.c",
+      "bytes": 4670,
+      "sha256": "c14929824cc531ea2587135d033ae6b81acef671c12e85f23ebfae97f74a1d11"
+    },
+    {
+      "path": "Core/Src/drive_lift_stop_diag.h",
+      "bytes": 386,
+      "sha256": "6434cea173ae26065a6f74fdaaeab55c3d1756cfe72f4f617e182b4a18ca03c5"
+    },
+    {
+      "path": "Core/Src/drive_safety.c",
+      "bytes": 121207,
+      "sha256": "e7cd4c2d8193b84223b6632f415d919684100d87c5917eb3a19b55c2bd6a4f03"
+    },
+    {
+      "path": "Core/Src/drive_target.c",
+      "bytes": 10965,
+      "sha256": "abf103666ae4fc8b3498622f0e09029e11466df3145391c1116b9ae234623cc0"
+    },
+    {
+      "path": "Core/Src/drive_target.h",
+      "bytes": 933,
+      "sha256": "04451492cc5871e14450b3a66d2aa3c79ff50dfe321c74b473bd1e2267ea1baf"
+    },
+    {
+      "path": "Core/Src/estop_status.c",
+      "bytes": 3605,
+      "sha256": "c4421de647b453a063bf3b3f0f2a2ec69fcca140fe15b968bd68e3f5ceb02982"
+    },
+    {
+      "path": "Core/Src/firmware_identity.c",
+      "bytes": 1007,
+      "sha256": "0c61e82cf8202e96e91edf4b333433034cf0d669b15e40cf3a0afa6557c2495a"
+    },
+    {
+      "path": "Core/Src/imu.c",
+      "bytes": 10704,
+      "sha256": "88044f41ec59c1d87e5a0da33b9bcbcea73aeccda967e50cc44d7230bd1c15ef"
+    },
+    {
+      "path": "Core/Src/imu_ism330dhcx.c",
+      "bytes": 7892,
+      "sha256": "01dd837a1829cde5ce63797770997b59b2c321a6a94fa88b6e92a9b8d67164bf"
+    },
+    {
+      "path": "Core/Src/jetson_protocol.c",
+      "bytes": 89421,
+      "sha256": "8ca2fba14ee113fd25d2d28bf97556804f6a188417d930ed2238e0f02a8185e5"
+    },
+    {
+      "path": "Core/Src/jetson_tx.c",
+      "bytes": 19647,
+      "sha256": "6f7c434b8580ce6c348d78cc00e1e6c13592cab02de949a457750e011040dda2"
+    },
+    {
+      "path": "Core/Src/lift.c",
+      "bytes": 94358,
+      "sha256": "a83ae929844b26f770902c15a1d7b66eb5ab6ad49ff026bcfa7149770ed69ed9"
+    },
+    {
+      "path": "Core/Src/main.c",
+      "bytes": 34925,
+      "sha256": "bd39cf4d807dbe58b94a32a0a0d258c0d214c939a23e8893707abef073e0f8aa"
+    },
+    {
+      "path": "Core/Src/modbus_rtu.c",
+      "bytes": 4955,
+      "sha256": "481418b527947cc52977a81e1e712668ea7455799875107ad6397cd0ede09f35"
+    },
+    {
+      "path": "Core/Src/motion_control.c",
+      "bytes": 49652,
+      "sha256": "d2a485c19105e11a62ef1f5a44ac88585130e4b5694732f6d420524962a739c1"
+    },
+    {
+      "path": "Core/Src/odom.c",
+      "bytes": 4474,
+      "sha256": "385e719dded952cb6a522d27dc892749ab680a56e0a7995dd421be91c1478925"
+    },
+    {
+      "path": "Core/Src/safety_io.c",
+      "bytes": 929,
+      "sha256": "4bdb0c5aa664fc97afc48d81117cd4f24b68db317ee6ba4bc6128eddeddf00b7"
+    },
+    {
+      "path": "Core/Src/status_light.c",
+      "bytes": 873,
+      "sha256": "522fbb5e38012efc6213405368dae4e1a7007305e10e72f12bdf6b10acc38add"
+    },
+    {
+      "path": "Core/Src/stm32h7xx_hal_msp.c",
+      "bytes": 11111,
+      "sha256": "7f36537da979ea8efd1c5a786d65205c433164e52c7455b2325efccab419d421"
+    },
+    {
+      "path": "Core/Src/stm32h7xx_it.c",
+      "bytes": 6481,
+      "sha256": "a5885be7793536afcc99089a36da69a95112a50594a574975170ed5e2957d5c0"
+    },
+    {
+      "path": "Core/Src/syscalls.c",
+      "bytes": 2847,
+      "sha256": "b993ebb4f882e8be21cec8d95983655a0caf4f0eb11348f20f6371f5a5031717"
+    },
+    {
+      "path": "Core/Src/sysmem.c",
+      "bytes": 2746,
+      "sha256": "142809d54673b057ce04a5dc656b8abcb4b121102111e347d4913b328dcc9014"
+    },
+    {
+      "path": "Core/Src/system_stm32h7xx.c",
+      "bytes": 19751,
+      "sha256": "95a8fc5a6d765a78a8b6f0dd1fedc48994096df544e611e951c6c2e4426570e6"
+    },
+    {
+      "path": "Core/Src/wheel_pdo_config.c",
+      "bytes": 12223,
+      "sha256": "195aab603daa13d04500f8e177de91785b45ff89b31348b224d9d2ddf463f6d2"
+    },
+    {
+      "path": "Core/Src/wheel_rpdo_tx.c",
+      "bytes": 8283,
+      "sha256": "da7e1ae40beb66653495e14f614694448d41dd71164c1638bdfd1e99fd76db4c"
+    },
+    {
+      "path": "Core/Startup/startup_stm32h723zgtx.s",
+      "bytes": 30193,
+      "sha256": "0ffb354f56e04ae8735835c95231fef4f773cb5ba2dd2329546cb999434a0106"
+    },
+    {
+      "path": "Drivers/CMSIS/Device/ST/STM32H7xx/LICENSE.txt",
+      "bytes": 371,
+      "sha256": "135fb2d86e9ecdf6824cc3bba21c72b8e380c07b055fbebb6b995463eb609baf"
+    },
+    {
+      "path": "Drivers/CMSIS/LICENSE.txt",
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    {
+      "path": "Drivers/STM32H7xx_HAL_Driver/LICENSE.txt",
+      "bytes": 377,
+      "sha256": "d5a162f3eaf2b7b6762f00700017cae5695ebbdce7932fead8316448baafd9c1"
+    },
+    {
+      "path": "docs/BOOT_RECOVERY_V1.md",
+      "bytes": 15589,
+      "sha256": "9b0a5a706e5c174fe8233aa0794f1c3fb23764cc89f9949da3e0a2627dd02ab3"
+    },
+    {
+      "path": "docs/PD15_ESTOP_TELEMETRY.md",
+      "bytes": 8127,
+      "sha256": "652e37400849389c9a04b7b3f024765c4f3665d8359d46502f672c9286798816"
+    },
+    {
+      "path": "docs/protocol_contract.md",
+      "bytes": 51399,
+      "sha256": "33b63e86a60e0c26b5a96f0776dd15b7a4d34e1b2748613858923794feb1c2cd"
+    },
+    {
+      "path": "jetson_tools/amr_protocol.py",
+      "bytes": 82075,
+      "sha256": "78eb1cae71fa8dc82ef55068522be6a38c0bfa957006f75c9b5a957cdd3a6341"
+    },
+    {
+      "path": "jetson_tools/amr_rpdo_diagnostics.py",
+      "bytes": 7133,
+      "sha256": "fc2b4048216e083dbd348585b375cb1ed77438cf5ed19cddf3bf1118ffbeb5d9"
+    },
+    {
+      "path": "tests/host/fake_bus.c",
+      "bytes": 10263,
+      "sha256": "7c1e22efe5372743ff20d7214263ea87493e3c3fb1d3bfeb6d71922903ab5e0f"
+    },
+    {
+      "path": "tests/host/fake_bus.h",
+      "bytes": 1900,
+      "sha256": "61fe329cfe6bb14741d00e42e1b44d0d8011ec4607d4e8d23fde555d4e9f0ac3"
+    },
+    {
+      "path": "tests/host/stm32h7xx_hal.h",
+      "bytes": 3938,
+      "sha256": "275f47d76b164cd8ad99dd62667e5ee22390119e024077d355d6dd0536d1bfbb"
+    },
+    {
+      "path": "tests/host/test_drive_boot_recovery.c",
+      "bytes": 49997,
+      "sha256": "eb81601c7a7f0245d5aaee0c5a35f0a32873f40810c1795476e21394011f0fcd"
+    },
+    {
+      "path": "tests/host/test_drive_retarget.c",
+      "bytes": 8248,
+      "sha256": "c62f79b1a07585148cbf4d640e5b7e8b4a488e76e0b62bd6a2e189bec1ef9538"
+    },
+    {
+      "path": "tests/host/test_drive_rpdo.c",
+      "bytes": 12273,
+      "sha256": "ea145f344f96cd3b60ca6ca31fb821f9dc60c9fcd03b447cf05fca7753097b39"
+    },
+    {
+      "path": "tests/host/test_estop_status.c",
+      "bytes": 6216,
+      "sha256": "c55b0e973f9a269a462874ae84eb21b3f173438df5f275582c208054f42d44fd"
+    },
+    {
+      "path": "tests/host/test_lift_base_stop.c",
+      "bytes": 9277,
+      "sha256": "ce051625914038dc27704a676503ae308befa631a8e33a1dcdd67152acf11818"
+    },
+    {
+      "path": "tests/host/test_pdo_startup_recovery.c",
+      "bytes": 8490,
+      "sha256": "8cc9e54a754a0345881a90643a2d3433b553f4be7618a7a442f494300973ca82"
+    },
+    {
+      "path": "tests/host/test_status_light.c",
+      "bytes": 10695,
+      "sha256": "ffad1c6868ce4e4439bf306b873645b84c2d87c5f740db5114b6a899936057ae"
+    },
+    {
+      "path": "tests/host/test_wheel_rpdo.c",
+      "bytes": 15694,
+      "sha256": "a3790ea03d75214b92a51ff56619c28e3b81e4c5f53591cd4046dd606a427094"
+    },
+    {
+      "path": "tools/run_estop_status_tests.py",
+      "bytes": 1257,
+      "sha256": "dd732b6a7ae5c92c4d108a72c0286db45327bc676f6bfc43481c2311f80375d6"
+    },
+    {
+      "path": "tools/run_wheel_rpdo_tests.py",
+      "bytes": 6286,
+      "sha256": "98bef3fd5d9a0eb9b420c722fefb9c4a78728fc0a526f17d92bda1d1b60934db"
+    }
+  ],
+  "deployment_verified": false,
+  "note": "Selected source bytes, not a flashed-image or hardware-validation identity."
+}

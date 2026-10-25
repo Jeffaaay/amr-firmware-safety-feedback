@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-25T06:39:48.600358+00:00",
+  "snapshot_sha256": "86730900948957981855cc4322dd83bced1ef30598ecd2b05c97115b8b26169a",
+  "environment": {
+    "os": "Windows",
+    "compiler": [
+      "clang version 22.1.8 (https://github.com/llvm/llvm-project.git ca7933e47d3a3451d81e72ac174dcb5aa28b59d1)",
+      "Target: x86_64-w64-windows-gnu",
+      "Thread model: posix"
+    ],
+    "python": "3.12.10"
+  },
+  "command": "python code/run_checks.py",
+  "exit_code": 0,
+  "checked_in_repository": "Jeffaaay/amr-faultbench",
+  "scope": "Same source bytes and runners are mirrored in all three paper repositories; C suites were executed once against the P1 snapshot.",
+  "checks": [
+    "82 imported files match byte counts and SHA-256 manifest",
+    "PD15 state/debounce/report scheduling with fake GPIO and TX queue",
+    "Wheel RPDO, Drive retargeting, Lift/base-stop and TPDO startup recovery",
+    "Startup-only recovery with BASIC and strict profiles",
+    "Production-C diagnostic lines round-trip through the Jetson parser",
+    "Strict non-BASIC gates and status-light/UART parser regressions"
+  ],
+  "results_log": "validation/host_checks.txt",
+  "results_log_sha256": "0217eb3e3110389c875f6a05b28da67e96774fa8d60ecbb6de6142c27fe40836",
+  "hardware_accessed": false,
+  "target_firmware_built": false,
+  "paper_experiments_run": false,
+  "limitations": [
+    "Fake bus/GPIO tests cannot establish wire timing, queue delivery or physical safety.",
+    "Full STM32 driver/build tree is not bundled.",
+    "PD15 Jetson ROS2 base-driver integration and hardware acceptance are pending.",
+    "F01/SIL research harness, Trace freeze, measured braking and HIL remain open."
+  ]
+}

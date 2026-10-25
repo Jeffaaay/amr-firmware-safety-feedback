@@ -1,6 +1,6 @@
 # Safety-event instrumentation integration plan
 
-Scheduled October 26–November 1 only after October 25 schema freeze and separate development/HIL approval. No production firmware is included or modified.
+Scheduled October 26–November 1 only after October 25 schema freeze and separate development/HIL approval. The current application-source baseline is included under code/; production firmware is not modified by this research checkout.
 
 1. Bind the approved firmware/software/configuration digests to the harness dependency pin.
 2. Define verified source mappings for command acceptance/rejection, clamps, stop requests and independently observed outcomes. Preserve original safety limits and stop paths in both feedback conditions.

@@ -17,3 +17,13 @@
 2026-10-23 — Added the owner-supplied execution sequence, a local source-backed PCB baseline diagram, and paper-specific readiness contracts. Proprietary source-derived details stay local. No change to the October 23–November 1 gates, no added paper, no hardware action, no experimental result.
 
 2026-10-23 — Trace proposal revised to draft.2 after read-only stop/recovery inspection. Explicit stopping-observation scope, CAN metadata and native-counter normalization prevent false evidence equivalence. Offline contract review is available; October 25 freeze, real integration and all hardware approvals remain open.
+
+2026-10-24 — The owner explicitly requested a public baseline code folder in the
+three existing paper repositories. This supersedes the earlier private-only and
+no-source-publication decisions for the selected AMR PCB snapshot only. Each
+repository now carries the same byte-exact source baseline under code/, identified
+by a manifest digest, with paper-specific entry points. Production sources are
+unchanged. Bayro Fleet deployment code/data and credentials are not part of this
+selection. The shared research harness still belongs to P1 and existing dependency
+pins remain unchanged. Baseline host regressions are software checks, not paper
+experiment results or hardware validation; the frozen research schedule is unchanged.
